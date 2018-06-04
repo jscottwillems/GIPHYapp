@@ -1,0 +1,20 @@
+#mainContent {
+    max-width: 600px;
+}
+
+#searchBar {
+    margin-top: 200px;
+    margin-right: 100px;
+    margin-left: auto;
+}
+
+.buttons {
+    display: inline;
+    margin: 30px 10px 30px 10px;
+}
+
+.btn-success {
+    background-color: aqua;
+    border-color: blue;
+    color: black;
+}
