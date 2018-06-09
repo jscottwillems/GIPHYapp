@@ -14,24 +14,26 @@
 
 </head>
 <body>
-
-    <nav class="navbar fixed-top navbar-light bg-light">
-        <div class="buttons">
-            <button type="button" class="btn btn-success">Test</button>
-        </div>
-    </nav>
     <container id="mainContent">
-        <div class="row">
-            <div class="col-8" id="gifHolder"></div>
-            <div class="col-4" id="searchBar">
+        <div class="row" id="header">
+            <div class="col-4" id="logoForm">
+                <img src="assets/images/logo.png" alt="logo" id="logo">
                 <form>
                     <div class="form-group">
-                        <label for="controlInput">Place Holder</label>
-                        <input type="text" class="form-control" id="search" placeholder="search here">
+                        <input type="text" class="form-control-sm" id="search" placeholder="search here">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-sm" id="submitBtn">Submit</button>
                 </form>
             </div>
+            <div class="col-8" id="buttons">
+                <button type="button" class="btn btn-success" id="newButton">Test</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="gifHolder"></div>
+        </div>
+        <div class="row" id="footer">
+            <div class="col-12"></div>
         </div>
     </container>
 

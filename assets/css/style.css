@@ -1,20 +1,64 @@
-#mainContent {
-    max-width: 600px;
+body {
+    background: rgb(43, 42, 42);
 }
 
-#searchBar {
-    margin-top: 200px;
-    margin-right: 100px;
+mainContent {
+    height: 100em;
+}
+
+form {
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 210px;
+}
+
+#logo {
+    width: 190px;
+    margin-left: 5px;
+    margin-top: 15px;
+    float: left;
+}
+
+
+#buttons {
+    display: inline-block;
+    max-width: 900px;
+    margin-right: 30px;
     margin-left: auto;
+    margin-top: 65px;
+
 }
 
-.buttons {
+.btn {
+    margin: 3px 3px 3px 3px;
+}
+
+#gifHolder {
+    min-height: 100vh;
+    height: auto;
+    margin: 30px 30px 30px 30px;
+    max-width: 100em;
+}
+
+.gifImg {
     display: inline;
-    margin: 30px 10px 30px 10px;
+    margin: 5px 5px 5px 5px;
 }
 
-.btn-success {
-    background-color: aqua;
-    border-color: blue;
-    color: black;
+#header {
+    height: auto;
+    width: 100em;
+    min-height: 130px;
+    margin: 0px 0px 0px 0px;
+    background: black;
+    padding: 30px 30px 30px 30px; 
+}
+
+#footer {
+    position: relative;
+    margin-top: 30px;
+    bottom:0;
+    width:100em;
+    height:80px;
+    background: black;
 }
