@@ -35,11 +35,17 @@ form {
     background: rgb(161, 160, 160);
 }
 
+#instructions {
+    color: rgb(164, 164, 165);
+    text-align: center;
+    margin-top: 20px;
+}
+
 #gifHolder {
     color: black;
     min-height: 100vh;
     height: auto;
-    margin: 30px 30px 30px 30px;
+    margin: 20px 30px 30px 30px;
     max-width: 100em;
 }
 

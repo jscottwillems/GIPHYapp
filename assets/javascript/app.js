@@ -2,6 +2,10 @@ $(document).ready(function(){
 
   var topics = ['The Office', 'Parks and Rec', 'Tim and Eric', 'Eric Andre'];
 
+  var choose = $('<h3>Click a button to display GIFs or do a search to add your own!</h3>');
+  $('#instructions').html(choose);
+
+
   
   renderButtons();
   
@@ -26,6 +30,9 @@ $(document).ready(function(){
   function showGifs() {
     
     //$('#gifHolder').empty();
+    var instruct = $('<h3>Click each GIF to play/pause</h3>')
+    $('#instructions').html(instruct);
+
     var input = $(this).attr('data-name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=GAtXftqpLMuAtERXbrb9eso4eu7TzhBI&limit=10"
     
