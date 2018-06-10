@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var topics = ['test', 'test2', 'test3', 'test4'];
+  var topics = ['The Office', 'Parks and Rec', 'Tim and Eric', 'Eric Andre'];
 
   
   renderButtons();
@@ -17,13 +17,15 @@ $(document).ready(function(){
       a.text(topics[i]);
       
       $('#buttons').append(a);
+
     };
   };
+
+  $(document).on('click', '.newButton', showGifs)
   
-  
-  $('.newButton').on('click', function() {
+  function showGifs() {
     
-    $('#gifHolder').empty();
+    //$('#gifHolder').empty();
     var input = $(this).attr('data-name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=GAtXftqpLMuAtERXbrb9eso4eu7TzhBI&limit=10"
     
@@ -39,8 +41,10 @@ $(document).ready(function(){
       for (var i = 0; i < results.length; i++) {
         
         var gifDiv = $('<div>');
+        gifDiv.addClass('gifImg');
 
         var p = $('<p>');
+        p.addClass('gifRating');
         
         var rating = results[i].rating.toUpperCase();
         
@@ -52,10 +56,9 @@ $(document).ready(function(){
         }
         
         var gifImg = $('<img>');
-        gifImg.addClass('gifImg')
-        gifImg.attr('src', results[i].images.fixed_height_small_still.url);
-        gifImg.attr('data-still', results[i].images.fixed_height_small_still.url);
-        gifImg.attr('data-active', results[i].images.fixed_height_small.url);
+        gifImg.attr('src', results[i].images.fixed_height_still.url);
+        gifImg.attr('data-still', results[i].images.fixed_height_still.url);
+        gifImg.attr('data-active', results[i].images.fixed_height.url);
         
         gifDiv.append(p);
         gifDiv.append(gifImg);
@@ -68,7 +71,7 @@ $(document).ready(function(){
         
         console.log(e);
         
-        var current = e.currentTarget.dataset.still;
+        var current = $(this).attr('src');
         var active = e.currentTarget.dataset.active;
         var still = e.currentTarget.dataset.still;
         
@@ -82,7 +85,7 @@ $(document).ready(function(){
       });
       
     })
-  });
+  };
   
       $('#submitBtn').on('click', function(event) {
         event.preventDefault();
@@ -96,4 +99,8 @@ $(document).ready(function(){
         $('form')[0].reset();
       
   })
+      $('#backToTop').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+  });
 })
